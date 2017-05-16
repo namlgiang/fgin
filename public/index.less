@@ -1,0 +1,317 @@
+// out: index.css,compress: true
+
+@cyan: #2ddfff;
+@grey: #616161;
+
+/*
+********************************
+******************************** NEWS
+********************************
+*/
+
+.news {
+  z-index: 5;
+
+  .content {
+    background: #fff;
+    box-sizing: border-box;
+    padding: 20px;
+    box-shadow: 0 30px 100px rgba(0,0,0,.2);
+    overflow: hidden;
+
+    .framed {
+      width: 700px;
+      max-width: 100%;
+      position: relative;
+
+      .heading {
+        margin-bottom: 20px;
+      }
+
+      .tile-big {
+        width: 340px;
+        padding-right: 5px;
+        margin-right: 5px;
+        border-right: 1px solid rgba(0,0,0,.1);
+        box-sizing: border-box;
+        float: left;
+        height: 180px;
+
+        .image {
+          width: 180px;
+          height: 180px;
+          float: left;
+          background: @cyan;
+        }
+        .title, .brief {
+          float: left;
+          width: 150px;
+          max-height: 90px;
+        }
+        .title {
+          margin-top: 20px;
+        }
+      }
+      .tile {
+        float: left;
+        width: 175px;
+        height: 90px;
+        .brief {
+          max-height: 36px;
+          width: 150px;
+        }
+        .title {
+          font-style: italic;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+          font-size: 13px;
+          width: 160px;
+        }
+        .image {
+          margin-top: 10px;
+          width: 22px;
+          height: 22px;
+          background: @cyan;
+          margin-left: 10px;
+          margin-bottom: 2px;
+        }
+      }
+
+      .title {
+        font-weight: bold;
+        font-size: 14px;
+        box-sizing: border-box;
+        padding-left: 10px;
+      }
+
+      .brief {
+        font-size: 12px;
+        font-style: italic;
+        box-sizing: border-box;
+        padding-left: 10px;
+        color: @grey;
+        font-weight: 600;
+        overflow: hidden;
+      }
+
+    }
+  }
+}
+
+/*
+********************************
+******************************** TOP
+********************************
+*/
+
+.top {
+  width: 1000px;
+  height: 10px;
+  margin: 0 auto;
+  max-width: 100%;
+  position: relative;
+  z-index: 10;
+
+  .table {
+    width: 280px;
+    position: absolute;
+    right: 5px;
+    background: #252525;
+    color: #fff;
+    top: -300px;
+
+    .heading {
+      margin: 20px 20px 30px 20px;
+      font-size: 14px;
+    }
+    .heading::before {
+      content: "";
+      display: inline-block;
+      width: 2px;
+      height: 8px;
+      margin-bottom: 3px;
+      margin-right: 5px;
+      background: @cyan;
+    }
+    ul {
+      list-style: none;
+      margin: 0; padding: 0;
+      li {
+        margin: 0;
+        padding: 5px;
+        font-size: 12px;
+        font-style: italic;
+        background: #2c2c2c;
+        overflow: hidden;
+        .number {
+          font-style: normal;
+          font-size: 20px;
+          font-weight: 600;
+          color: @cyan;
+          text-align: right;
+          width: 20px;
+          height: 10px;
+          float: left;
+          margin-right: 10px;
+          transform: translateY(1px);
+                  }
+        .name {
+          display: inline-block;
+                  }
+      }
+      li:nth-child(odd) {
+        background: #363636;
+      }
+    }
+    .fulllist {
+      text-transform: uppercase;
+      color: @cyan;
+      border-bottom: 3px solid @cyan;
+      margin: 20px auto 0;
+      width: 80px;
+      text-align: center;
+      font-weight: bold;
+    }
+  }
+}
+
+/*
+********************************
+******************************** KNOWLEDGE
+********************************
+*/
+.knowledge {
+  margin-top: 50px;
+
+  .heading {
+    margin-left: 20px;
+  }
+
+  .slide {
+    width: 98%;
+    height: 270px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    .long {
+      position: absolute;
+      width: 5000px;
+      height: 270px;
+      margin: 5px;
+      .item {
+        float: left;
+        margin-right: 20px;
+        .image {
+          margin-top: 30px;
+          width: 230px;
+          height: 128px;
+          background: @cyan;
+          box-shadow: 0 5px 50px rgba(0,0,0,.2);
+        }
+        .title {
+          font-size: 12px;
+          width: 210px;
+          font-weight: 700;
+          margin-top: 10px;
+        }
+        .title::before {
+          content: "";
+          display: block;
+          width: 3px;
+          height: 20px;
+          background: @cyan;
+          display: block;
+          float: left;
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+  .content {position: relative;}
+  .next {
+    position: absolute;
+    right: 0;
+    top: 100px;
+    z-index: 10;
+    background: #252525;
+    color: @cyan;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 2px 10px 4px;
+  }
+  .next::before {
+    content: "";
+    display: inline-block;
+    margin: 4px 5px 2px 0;
+    vertical-align: bottom;
+    background: url("img/next.png");
+    width: 7px;
+    height: 13px;
+  }
+}
+
+/*
+********************************
+******************************** MOST WANTED
+********************************
+*/
+.most-wanted {
+  text-align: center;
+  .heading {
+    margin-bottom: 80px;
+  }
+  .heading .inside {
+    margin-left: 0;
+  }
+  .tile {
+    width: 300px;
+    box-shadow: 0 10px 50px rgba(0,0,0,.2);
+    display: inline-block;
+    margin: 0 10px;
+    z-index: 5;
+
+    .image {
+      height: 220px;
+      background: @cyan;
+      position: relative;
+      .title {
+        position: absolute;
+        bottom: 5px;
+        width: 100%;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+    }
+    .description {
+      background: #fff;
+      box-sizing: border-box;
+      padding: 10px;
+      font-size: 13px;
+      font-style: italic;
+      font-weight: 600;
+      color: @grey;
+    }
+    .action {
+      text-transform: uppercase;
+      overflow: hidden;
+      .share, .buy {
+        background: #252525;
+        color: #fff;
+        padding: 5px 15px;
+        float: left;
+        text-align: center;
+        font-size: 14px;
+        cursor: pointer;
+        overflow: hidden;
+        position: relative;
+        transition: 200ms;
+      }
+      .buy {background: @cyan; color: #252525; font-weight: bold;}
+      .share:hover, .buy:hover {
+        padding: 5px 20px;
+      }
+    }
+  }
+}

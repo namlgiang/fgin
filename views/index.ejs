@@ -3,26 +3,14 @@
   <head>
     <meta charset="utf-8">
     <title>Fidget Insider</title>
-    <link rel="icon" href="icon.png" type="image/x-icon"/>
+    <link rel="icon" href="icon.png" type="image/png"/>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
     <link rel="stylesheet" href="style.css" charset="utf-8">
+    <link rel="stylesheet" href="index.css" charset="utf-8">
   </head>
   <body>
 
-    <div class="header">
-
-      <div class="content">
-        <img class="logo" src="img/logo.png" alt="Fidget Insider" />
-        <ul class="menu">
-          <li class="active">Home</li>
-          <li>News</li>
-          <li>Top</li>
-          <li>Knowledge</li>
-          <li>Where To Buy</li>
-        </ul>
-      </div>
-
-    </div>
+    <%- include('template/header') -%>
 
     <!--
     ***************************************
@@ -189,42 +177,7 @@
     ***************************************  FOOTER
     ***************************************
     -->
-    <div class="footer">
-      <div class="content">
-
-        <div class="tile">
-          <div class="title">about us</div>
-          <div class="desc">
-            Fidget Insider let you know about all the latest fidget toy trend
-          </div>
-        </div>
-
-        <div class="tile">
-          <div class="title">menu</div>
-          <div class="desc">
-            <a href="#">home</a><br>
-            <a href="#">news</a><br>
-            <a href="#">top</a><br>
-            <a href="#">knowledge</a><br>
-            <a href="#">where to buy</a><br>
-          </div>
-        </div>
-
-        <div class="tile">
-          <div class="title">top fidget</div>
-          <div class="desc">
-            fidget cube<br>
-            aerospinner<br>
-            ispinner
-          </div>
-        </div>
-
-        <div class="copy">
-          Copyrighy &copy; 2017 Fidget Insider Inc. All righs reserved.
-        </div>
-
-      </div>
-    </div>
+    <%- include('template/footer') -%>
 
     <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
     <script type="text/javascript" src="main.js"></script>

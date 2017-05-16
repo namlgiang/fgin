@@ -1,0 +1,62 @@
+<div class="footer">
+  <div class="content">
+
+    <div class="tile">
+      <div class="title">about us</div>
+      <div class="desc">
+        Fidget Insider let you know about all the latest fidget toy trend
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="title">menu</div>
+      <div class="desc">
+        <a href="#">home</a><br>
+        <a href="#">news</a><br>
+        <a href="#">top</a><br>
+        <a href="#">knowledge</a><br>
+        <a href="#">where to buy</a><br>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="title">random fidget</div>
+      <div class="desc">
+        <a href="#">fidget cube</a><br>
+        <a href="#">aerospinner</a><br>
+        <a href="#">ispinner</a>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="title">social media</div>
+      <div class="desc">
+        <a href="#">facebook</a><br>
+        <a href="#">twitter</a><br>
+        <a href="#">pinterest</a>
+      </div>
+    </div>
+
+    <div class="copy">
+      Copyrighy &copy; 2017 Fidget Insider Inc. All righs reserved.
+    </div>
+
+  </div>
+</div>
+
+<script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $(window).scroll(function() {
+      var top = $("body").scrollTop();
+      if(top > 5) $(".header").addClass("collapse");
+        else $(".header").removeClass("collapse");
+    });
+    var nav = $(".menu a");
+    for(var i=0; i<nav.length; i++)
+      if(window.location.pathname.indexOf($(nav[i]).attr("href")) != -1) {
+        $(".menu li").removeClass("active");
+        $(nav[i]).closest('li').addClass("active");
+      }
+  });
+</script>

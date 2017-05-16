@@ -1,0 +1,20 @@
+{
+  "name": "fidgetinsider",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/namlgiang/fgin.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/namlgiang/fgin/issues"
+  },
+  "homepage": "https://github.com/namlgiang/fgin#readme",
+  "dependencies": {
+    "ejs": "^2.5.6",
+    "express": "^4.15.2"
+  }
+}

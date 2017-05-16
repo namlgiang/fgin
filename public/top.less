@@ -1,0 +1,78 @@
+// out: top.css,compress: true
+
+@cyan: #2ddfff;
+@grey: #616161;
+
+.top {
+  margin-bottom: 100px;
+
+  .heading {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .ranking {
+
+    .tile {
+      height: 250px;
+      margin-bottom: 50px;
+
+      .number {
+        font-size: 30px;
+        font-weight: 700;
+        color: @cyan;
+        margin-right: 10px;
+        position: relative;
+      }
+      .number::after {
+        content: "";
+        display: block;
+        width: 100px;
+        height: 3px;
+        background: @cyan;
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+      }
+      .name {
+        font-weight: 600;
+        margin-bottom: 20px;
+      }
+      .image {
+        width: 180px;
+        height: 180px;
+        float: left;
+        background: @cyan;
+        margin-right: 15px;
+        box-shadow: 0 10px 50px rgba(0,0,0,.1);
+      }
+      .desc {
+        font-size: 14px;
+        height: 100px;
+      }
+      .action {
+        .share, .buy {
+          background: #252525;
+          color: #fff;
+          float: left;
+          font-size: 12px;
+          text-transform: uppercase;
+          padding: 5px 20px;
+          cursor: pointer;
+          box-shadow: 0 10px 50px rgba(0,0,0,.1);
+          transition: 200ms;
+        }
+        .buy {
+          background: @cyan;
+          color: #252525;
+          font-weight: 700;
+        }
+        .share:hover, .buy:hover {
+          padding: 5px 30px;
+        }
+      }
+    }
+
+  }
+
+}

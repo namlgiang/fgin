@@ -1,0 +1,62 @@
+// out: buy.css,compress: true
+
+@cyan: #2ddfff;
+@grey: #616161;
+
+.store {
+  text-align: center;
+  margin-bottom: 100px;
+  .heading {
+    margin-bottom: 80px;
+  }
+  .tile {
+    width: 300px;
+    box-shadow: 0 10px 50px rgba(0,0,0,.2);
+    display: inline-block;
+    margin: 0 10px;
+    z-index: 5;
+
+    .image {
+      height: 220px;
+      background: @cyan;
+      position: relative;
+      .title {
+        position: absolute;
+        bottom: 5px;
+        width: 100%;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+    }
+    .description {
+      background: #fff;
+      box-sizing: border-box;
+      padding: 10px;
+      font-size: 13px;
+      font-style: italic;
+      font-weight: 600;
+      color: @grey;
+    }
+    .action {
+      text-transform: uppercase;
+      overflow: hidden;
+      .share, .buy {
+        background: #252525;
+        color: #fff;
+        padding: 5px 15px;
+        float: left;
+        text-align: center;
+        font-size: 14px;
+        cursor: pointer;
+        overflow: hidden;
+        position: relative;
+        transition: 200ms;
+      }
+      .buy {background: @cyan; color: #252525; font-weight: bold;}
+      .share:hover, .buy:hover {
+        padding: 5px 20px;
+      }
+    }
+  }
+}
