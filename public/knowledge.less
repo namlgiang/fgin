@@ -1,0 +1,39 @@
+// out: knowledge.css,compress: true
+
+@cyan: #2ddfff;
+@grey: #616161;
+
+.knowledge {
+  margin-bottom: 100px;
+  overflow: hidden;
+
+  .heading {
+    margin-bottom: 30px;
+  }
+
+  .tile {
+    float: left;
+    margin: 10px 20px 10px 0;
+    .image {
+      width: 300px;
+      height: 150px;
+      background: @cyan;
+      box-shadow: 0 10px 50px rgba(0,0,0,.1);
+    }
+    .title {
+      width: 300px;
+      font-weight: bold;
+      font-size: 14px;
+      margin: 10px 0;
+    }
+    .title::before {
+      content: "";
+      display: block;
+      float: left;
+      width: 3px;
+      height: 25px;
+      margin-right: 10px;
+      background: @cyan;
+    }
+  }
+}
