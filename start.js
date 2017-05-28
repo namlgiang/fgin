@@ -45,6 +45,6 @@ app.get('/picks', function(req, res) {
   res.render('picks');
 });
 
-app.listen(8080, function () {
+app.listen(80, function () {
   console.log('Example app listening on port 80!')
 })
