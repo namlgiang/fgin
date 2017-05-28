@@ -2,10 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Fidget Insider</title>
-    <link rel="icon" href="icon.png" type="image/png"/>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
-    <link rel="stylesheet" href="style.css" charset="utf-8">
+    <%- include('template/commonlinks') -%>
     <link rel="stylesheet" href="index.css" charset="utf-8">
   </head>
   <body>
@@ -25,30 +22,30 @@
           <div class="heading">NEWS <a class="inside" href="/news">inside</a></div>
 
           <div class="tile-big">
-            <div class="image"></div>
-            <div class="title">Top 10 Fidget Toys 2017</div>
-            <div class="brief">Fidget toys have becoming a big trend in 2017, and chosign a good fidget toy is not so easy job to do.</div>
+            <div class="image" style="background-image: url(/img/news/17.jpg)"></div>
+            <a class="title" href="/news/fidget-spinner-game-becomes-the-most-downloaded-free-iphone-app">Fidget Spinner game becomes the most-downloaded free iPhone app</a>
+            <div class="brief">As if the fidget spinners craze wasn’t overwhelming enough in the physical world, they’ve now come out tops on mobile phones.</div>
           </div>
 
           <div class="tile">
-            <div class="image"></div>
-            <div class="title">Best Fidget Toy Ever</div>
-            <div class="brief">Ok this is whatever a description.</div>
+            <div class="image" style="background: #36f19f"></div>
+            <a class="title" href="/news/the-fidget-spinner-fad-adults-dont-get-it-and-thats-the-point">The fidget spinner fad: Adults don't get it, and that's the point</a>
+            <!-- <div class="brief">Ok this is whatever a description.</div> -->
           </div>
           <div class="tile">
-            <div class="image"></div>
-            <div class="title">Top 10 Fidget Toys 2017 Of The Year</div>
-            <div class="brief">Fidget toys have becoming a big trend in 2017, and chosign a good fidget toy is not so easy job to do.</div>
+            <div class="image" style="background: #acff58"></div>
+            <a class="title" href="/news/fidget-spinner-5-fast-facts-you-need-to-know">Fidget Spinner: 5 Fast Facts You Need To Know</a>
+            <!-- <div class="brief">Fidget toys have becoming a big trend in 2017, and chosign a good fidget toy is not so easy job to do.</div> -->
           </div>
           <div class="tile">
-            <div class="image"></div>
-            <div class="title">Top 10 Fidget Toys 2017</div>
-            <div class="brief">Fidget toys have becoming a big trend in 2017, and chosign a good fidget toy is not so easy job to do.</div>
+            <div class="image" style="background: #ffdf58"></div>
+            <a class="title" href="/news/lets-explore-the-physics-of-rotational-motion-with-a-fidget-spinner">Let’s Explore the Physics of Rotational Motion With a Fidget Spinner</a>
+            <!-- <div class="brief">Fidget toys have becoming a big trend in 2017, and chosign a good fidget toy is not so easy job to do.</div> -->
           </div>
           <div class="tile">
-            <div class="image"></div>
-            <div class="title">Best Fidget Toy Ever</div>
-            <div class="brief">Ok this is whatever a description.</div>
+            <div class="image" style="background: #fff071"></div>
+            <a class="title" href="/news/fidget-spinners-the-hit-toy-that-spun-out-of-nowhere">Fidget Spinners: The Hit Toy That Spun Out Of Nowhere</a>
+            <!-- <div class="brief">Ok this is whatever a description.</div> -->
           </div>
 
         </div>
@@ -68,19 +65,17 @@
         </div>
         <ul class="ranking">
           <li><span class="number">1</span><span class="name">Fidget Cube</span></li>
-          <li><span class="number">2</span><span class="name">Blue Fidget Spinner</span></li>
-          <li><span class="number">3</span><span class="name">Fidget Cube</span></li>
-          <li><span class="number">4</span><span class="name">Blue Fidget Spinner</span></li>
-          <li><span class="number">5</span><span class="name">Fidget Cube</span></li>
-          <li><span class="number">6</span><span class="name">Blue Fidget Spinner</span></li>
-          <li><span class="number">7</span><span class="name">Fidget Cube</span></li>
-          <li><span class="number">8</span><span class="name">Blue Fidget Spinner</span></li>
-          <li><span class="number">9</span><span class="name">Fidget Cube</span></li>
-          <li><span class="number">10</span><span class="name">Blue Fidget Spinner</span></li>
+          <li><span class="number">2</span><span class="name">AeroSpinner</span></li>
+          <li><span class="number">3</span><span class="name">Phat Boy</span></li>
+          <li><span class="number">4</span><span class="name">SpinTool</span></li>
+          <li><span class="number">5</span><span class="name">Remedy Spinner</span></li>
+          <li><span class="number">6</span><span class="name">Mito M55</span></li>
+          <li><span class="number">7</span><span class="name">Rotobow Nano Ti</span></li>
+          <li><span class="number">8</span><span class="name">Gorilla Spinner</span></li>
+          <li><span class="number">9</span><span class="name">Zerohour Rebel Spinner</span></li>
+          <li><span class="number">10</span><span class="name">Zekpro Fidget Spinner</span></li>
         </ul>
-        <a class="fulllist" href="/top">
-          Full List
-        </a>
+        <a class="fulllist" href="/top"></a>
       </div>
     </div>
 
@@ -93,26 +88,35 @@
       <div class="content">
 
         <div class="heading"> Knowledge <a class="inside" href="/knowledge">inside</a></div>
-        <div class="next">next</div>
+        <div class="prev">prev</div>
+        <div class="next show">next</div>
         <div class="slide">
 
           <div class="long">
-            <div class="item">
-              <div class="image"></div>
-              <div class="title">How to clean your fidget spinner</div>
-            </div>
-            <div class="item">
-              <div class="image"></div>
-              <div class="title">What make a good fidget spinner</div>
-            </div>
-            <div class="item">
-              <div class="image"></div>
-              <div class="title">All about bearing type of fidget spinner</div>
-            </div>
-            <div class="item">
-              <div class="image"></div>
-              <div class="title">How material aaffect spinning effeciency of fidget spinner</div>
-            </div>
+            <a class="tile" href="/knowledge/fidget-spinner-which-one-to-buy">
+              <div class="image" style="background-image: url(/img/knowledge/0.jpg)"></div>
+              <div class="title">Which Fidget Spinner To Buy?</div>
+            </a>
+            <a class="tile" href="/knowledge/fidget-spinner-introduction-to-bearings">
+              <div class="image" style="background-image: url(/img/knowledge/1.jpg)"></div>
+              <div class="title">Fidget Spinner: Introduction to Bearings</div>
+            </a>
+            <a class="tile" href="/knowledge/fidget-spinner-how-to-increase-spinning-time">
+              <div class="image" style="background-image: url(/img/knowledge/2.jpg)"></div>
+              <div class="title">Fidget Spinner: How To Increase Spinning Time</div>
+            </a>
+            <a class="tile" href="/knowledge/fidget-spinner-difference-between-materials">
+              <div class="image" style="background-image: url(/img/knowledge/3.jpg)"></div>
+              <div class="title">Fidget Spinner: Difference Between Materials</div>
+            </a>
+            <a class="tile" href="/knowledge/how-to-clean-your-fidget-spinner">
+              <div class="image" style="background-image: url(/img/knowledge/4.jpg)"></div>
+              <div class="title">How To Clean Your Fidget Spinner</div>
+            </a>
+            <a class="tile" href="/knowledge/fidget-toys-classification">
+              <div class="image" style="background-image: url(/img/knowledge/5.jpg)"></div>
+              <div class="title">Fidget Toys Classification</div>
+            </a>
           </div>
 
         </div>
@@ -131,41 +135,43 @@
         <div class="heading"> Most Wanted <br><a class="inside" href="/buy">inside</a></div>
 
         <div class="tile">
-          <div class="image">
+          <div class="image" style="background-image:url(product/fidget-cube.png)">
             <div class="title">Fidget Cube</div>
           </div>
           <div class="description">
-            The famous Fidget Cube developed by two brothers back in 2016. It was a huge successful project on Kickstater which draw in more than 6 millions dollars
+            Since it's huge success Kickstarters campaign, this has always been the most wanted fidget toy in the world.<br><br>
+            The campaign has raised more than $6.4 million from 154,926 backers.
           </div>
           <div class="action">
             <div class="share">Share</div>
-            <div class="buy">Buy / 22 USD</div>
+            <a class="buy" href="https://www.antsylabs.com/products/fidget-cube" target="_blank">Buy / 22 USD</a>
           </div>
         </div>
 
         <div class="tile">
-          <div class="image">
+          <div class="image" style="background-image:url(product/classic-fidget-spinner.png)">
+            <div class="title">Zekpro Fidget Spinner</div>
+          </div>
+          <div class="description">
+            There are tons of similar spinners in the market, and it's hard to find a good quality one. This is simply the most truthworthy and affordable classic spinner with high customer ranking on Amazon.
+          </div>
+          <div class="action">
+            <div class="share">Share</div>
+            <a class="buy" href="https://www.amazon.com/Zekpro-Anti-Anxiety-Focusing-Adults-Best-Relieves/dp/B01N7T7FPY/" target="_blank">Buy / 14.08 USD</a>
+          </div>
+        </div>
+
+        <div class="tile">
+          <div class="image" style="background-image:url(product/aerospinner.png)">
             <div class="title">AeroSpinner</div>
           </div>
           <div class="description">
-            The famous Fidget Cube developed by two brothers back in 2016. It was a huge successful project on Kickstater which draw in more than 6 millions dollars
+            When you need a serious spinner for long spinning time. This one will do the job.<br><br>
+            AeroSpinner claims that their product can spin more than 6 minutes in most cases. Which in their video is almost 8 minutes.
           </div>
           <div class="action">
             <div class="share">Share</div>
-            <div class="buy">Buy / 22 USD</div>
-          </div>
-        </div>
-
-        <div class="tile">
-          <div class="image">
-            <div class="title">iSpinner</div>
-          </div>
-          <div class="description">
-            The famous Fidget Cube developed by two brothers back in 2016. It was a huge successful project on Kickstater which draw in more than 6 millions dollars
-          </div>
-          <div class="action">
-            <div class="share">Share</div>
-            <div class="buy">Buy / 22 USD</div>
+            <a class="buy" href="https://aerospinner.com" target="_blank">Buy / 22.80 USD</a>
           </div>
         </div>
 
@@ -179,8 +185,8 @@
     -->
     <%- include('template/footer') -%>
 
-    <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
-    <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="/main.js"></script>
 
   </body>
 </html>

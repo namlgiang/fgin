@@ -1,0 +1,103 @@
+<div class="article">
+  <div class="header-bar">
+    <div class="image" style="background-image: url(/img/news/16.jpg)"></div>
+    <h1 class="title">
+      Let’s Explore the Physics of Rotational Motion With a Fidget Spinner
+    </h1>
+    <div class="brief">
+      YOU MAY FIND fidget spinners, or at least the attention they’re getting, annoying. I find them kind of cool, because they make handy tools for explaining physics.
+    </div>
+  </div>
+  <div class="content">
+
+    <h2>Moment of Inertia</h2>
+    <p>
+    Imagine a small boat and a large boat floating alongside a dock. Push either of them with your foot and it moves. You can easily move, and stop, the small boat. But once you get the big boat moving, you have a heck of a time stopping it. Why? Mass. You can think of mass as the property that makes it difficult to change the motion of an object.
+    </p>
+    <p>
+    Technically, this is all part of the momentum principle, which you can represent with these equations:
+    </p>
+    <img src="/img/news/7.jpg" alt="" />
+    <p>
+    Now imagine you have a rotating object and you want to change its rotational motion from, say, counterclockwise to clockwise. You must consider two things: the mass of the object, and the distribution of that mass about the axis of rotation. Physicists call this quantity the moment of inertia—or, as I like to call it, the rotational mass.
+    </p>
+    <p>
+    If you’d like to see how two objects with the same mass can exhibit a different moment of inertia, try this simple demo. Tape two identical masses to a stick. I used juice boxes. If you place the two masses at the end of the stick, changing the rotation motion is difficult. This is a high moment of inertia. Place them near the center, however, and changing the rotation is easier. That’s a low moment of inertia. I made a video to explain this. Yes, it’s a bit old, but it still checks out.
+    </p>
+    <center>
+    <iframe width="640" height="360" src="https://www.youtube-nocookie.com/embed/m9weJfoW5J0?rel=0" frameborder="0" allowfullscreen></iframe>
+    </center>
+    <p>
+    Just like there is the momentum principle for linear motion, there is also the angular momentum principle. You can express it with three equations:
+    </p>
+    <img src="/img/news/8.jpg" alt="" />
+    <p>
+    The first equation is the angular momentum principle. It states that a torque (which is like a rotational force) changes the angular momentum. The second equation is the definition of angular momentum where I represents the moment of inertia and ω represents the angular velocity (all of these are written as scalars for rotation about a fixed axis). Finally, the third equation shows one way of calculating the moment of inertia. For an object comprised of many smaller objects—say, for example, a collection of bowling balls or some beads connected by toothpicks—simply multiply the mass of each piece and the distance from the axis squared.
+    </p>
+    <p>
+    That’s all you need to know about the moment of inertia for now.
+    </p>
+
+    <h2>Physical Pendulum</h2>
+    <p>
+    Now, I could in theory measure the mass and size of a fidget spinner to calculate the moment of inertia using that third formula. But it would be tough, because the spinner doesn’t have a nice mathematical shape and it doesn’t have a uniform density. Instead, I will determine the moment of inertia with a physical pendulum.
+    </p>
+    <p>
+    You probably are familiar with a small mass swinging from a string. That’s a basic pendulum. It has a period of oscillation of:
+    </p>
+    <img src="/img/news/9.jpg" alt="" />
+    <p>
+    No, I won’t derive this expression because that is more complicated than you think. But in this expression, L represents the length of the string and g represents the local gravitational field (9.8 N/kg). Also, I like to use T for the period since P is too obvious (and already taken).
+    </p>
+    <p>
+    Now, if you replace the string with something rigid like, say, a stick, you have a physical pendulum. In this case, you determine the period of oscillation for small amplitudes with:
+    </p>
+    <img src="/img/news/10.jpg" alt="" />
+    <p>
+    In this case, I represents the moment of inertia about the axis of rotation (the pivot point). L represents the distance from the pivot to the center of mass and m represents the mass of the object. So you could imagine swinging an object and finding the moment of inertia from the period of oscillation. Yes, but what if you want the moment of inertia through some other axis? In that case, you use the parallel axis theorem. It states that if you know the moment of inertia for an object about an axis that runs through its center of mass, then the moment of inertia about some other axis (but parallel to the first, hence the name), is:
+    </p>
+    <img src="/img/news/11.jpg" alt="" />
+    <p>
+    Here m represents the mass of the object and d the distance from the center of mass axis to the new axis.
+    </p>
+
+    <h2>Measuring the Moment of Inertia</h2>
+    <p>
+    Now for an experiment. I will secure a fidget spinner to a stick with a mass of just 1 gram. I’ll attach the stick to a rotation sensor so I can measure the angle of the stick and the period of oscillation.
+    </p>
+    <img src="/img/news/12.jpg" alt="" />
+    <p>
+    If I want to find the moment of inertia about the center of the spinner, I can use the period of a physical pendulum and the parallel axis theorem to determine this relationship (I skipped some algebraic stuff):
+    </p>
+    <img src="/img/news/13.jpg" alt="" />
+    <p>
+    Here is the key part—something I try to get my introductory physics students to understand. I won’t determine just one period and use it to find I for the spinner. Instead, I will measure the period with the spinner at some distance (L). Then I will change the distance and find the new period. With this data, I can plot T multiplied by L vs. L2 (actually I will plot all of that stuff on the left side of the equation). Yes, I know that looks weird, but it should be a straight line with and the y-intercept will be the moment of inertia of the spinner. Boom.
+    </p>
+    <p>
+    Oh, what about about the mass of the stick? And the mass of the rubber band securing the spinner? Yes, technically those matter—but I will proceed anyway and you can’t stop me.
+    </p>
+    <center><iframe src="https://plot.ly/~RhettAllain/1796.embed" width="700" height="450" frameborder="0" scrolling="no"></iframe></center>
+    <p>
+    The y-intercept of this plot is 5.4 x 10-5 kg*m2. That is the moment of inertia of the fidget spinner. But wait! Let me get a rough approximation to see if this in the right ballpark. If the spinner was a solid disk of uniform density, it would have a moment of inertia of:
+    </p>
+    <img src="/img/news/14.jpg" alt="" />
+    <p>
+    I know the spinner has a mass of 0.0519 kg and a radius of around 3.7 cm. Putting this into the approximation, I get a calculated value of 7.1 x 10-5 kg*m2—close enough. Also, it should be clear that the fidget spinner is neither a disk nor of uniform density.
+    </p>
+    <p>
+    Now for a bonus: The same experiment with a metal ring.
+    </p>
+    <img src="/img/news/15.jpg" alt="" />
+    <p>
+    Placing the ring at different distances, I get a similar plot:
+    </p>
+    <center><iframe src="https://plot.ly/~RhettAllain/1798.embed" width="700" height="450" frameborder="0" scrolling="no"></iframe></center>
+    <p>
+    From the y-intercept, I get a moment of inertia with a value of 1.27 x 10-4 kg*m2. The ring has a radius of 0.0375 meters and mass of 0.0919 kg. Since the moment of inertia for a ring is just MR2, I can calculate the theoretical value for this object. The calculate moment of inertia 1.29 x 10-4 kg*m2. Dang. That actually worked. Mostly.
+    </p>
+
+    <div class="source">
+      Source: <a href="https://www.wired.com/2017/05/physics-of-a-fidget-spinner/">Wired</a>
+    </div>
+  </div>
+</div>

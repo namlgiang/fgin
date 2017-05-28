@@ -2,14 +2,15 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Fidget Insider</title>
-    <link rel="icon" href="icon.png" type="image/png"/>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
-    <link rel="stylesheet" href="style.css" charset="utf-8">
-    <link rel="stylesheet" href="news.css" charset="utf-8">
+    <%- include('template/commonlinks') -%>
+    <link rel="stylesheet" href="/news.css" charset="utf-8">
   </head>
   <body>
     <%- include('template/header') -%>
+
+    <%if(article) {%>
+      <%-include('article/' + article)-%>
+    <%} else {%>
 
     <div class="news">
       <div class="content">
@@ -17,39 +18,47 @@
 
         <div class="list">
 
-          <div class="tile">
-            <div class="image"></div>
-            <div class="title">Top 10 Fidget Toys 2017</div>
-            <div class="desc">Fidget toys have becoming a big trend in 2017, and chosign a good fidget toy is not so easy job to do.</div>
-            <div class="date">Mar 23 | 2017</div>
-          </div>
+          <a class="tile" href="/news/fidget-spinner-game-becomes-the-most-downloaded-free-iphone-app">
+            <div class="image" style="background-image: url(/img/news/17.jpg)"></div>
+            <div class="title">Fidget Spinner game becomes the most-downloaded free iPhone app</div>
+            <div class="desc">As if the fidget spinners craze wasn’t overwhelming enough in the physical world, they’ve now come out tops on mobile phones.</div>
+            <div class="date">May 23 | 2017</div>
+          </a>
 
-          <div class="tile">
-            <div class="image"></div>
-            <div class="title">Best Fidget Toy Ever</div>
-            <div class="desc">Ok this is whatever a description.</div>
-            <div class="date">Mar 23 | 2017</div>
-          </div>
+          <a class="tile" href="/news/the-fidget-spinner-fad-adults-dont-get-it-and-thats-the-point">
+            <div class="image" style="background-image: url(/img/news/3.jpg)"></div>
+            <div class="title">The fidget spinner fad: Adults don't get it, and that's the point</div>
+            <div class="desc">When I asked a colleague if he knew about fidget spinners, he responded: "I'd never heard of them until last week, when my daughter told me she had to have one."</div>
+            <div class="date">May 21 | 2017</div>
+          </a>
 
-          <div class="tile">
-            <div class="image"></div>
-            <div class="title">Top 10 Fidget Toys 2017</div>
-            <div class="desc">Fidget toys have becoming a big trend in 2017, and chosign a good fidget toy is not so easy job to do.</div>
-            <div class="date">Mar 23 | 2017</div>
-          </div>
+          <a class="tile" href="/news/fidget-spinner-5-fast-facts-you-need-to-know">
+            <div class="image" style="background-image: url(/img/news/4.jpg)"></div>
+            <div class="title">Fidget Spinner: 5 Fast Facts You Need To Know</div>
+            <div class="desc">The toy is so popular that different versions of the toy currently make up all of Amazon’s top 20 best sellers for toys and games. But what is really behind all of this?</div>
+            <div class="date">May 20 | 2017</div>
+          </a>
 
-          <div class="tile">
-            <div class="image"></div>
-            <div class="title">Best Fidget Toy Ever</div>
-            <div class="desc">Ok this is whatever a description.</div>
-            <div class="date">Mar 23 | 2017</div>
-          </div>
+          <a class="tile" href="/news/lets-explore-the-physics-of-rotational-motion-with-a-fidget-spinner">
+            <div class="image" style="background-image: url(/img/news/16.jpg)"></div>
+            <div class="title">Let’s Explore the Physics of Rotational Motion With a Fidget Spinner</div>
+            <div class="desc">YOU MAY FIND fidget spinners, or at least the attention they’re getting, annoying. I find them kind of cool, because they make handy tools for explaining physics.</div>
+            <div class="date">May 19 | 2017</div>
+          </a>
+
+          <a class="tile" href="/news/fidget-spinners-the-hit-toy-that-spun-out-of-nowhere">
+            <div class="image" style="background-image: url(/img/news/0.jpg)"></div>
+            <div class="title">Fidget Spinners: The Hit Toy That Spun Out Of Nowhere</div>
+            <div class="desc">NEW YORK –  Stores can't keep them in stock. Parents are scrambling to find them. And some schools have banned them.</div>
+            <div class="date">May 18 | 2017</div>
+          </a>
 
         </div>
 
       </div>
     </div>
 
+    <%}%>
     <%- include('template/footer') -%>
 
   </body>

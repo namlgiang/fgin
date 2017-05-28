@@ -1,7 +1,45 @@
 // out: knowledge.css,compress: true
 
 @cyan: #2ddfff;
+@blue: #009dff;
 @grey: #616161;
+
+.article {
+  margin-bottom: 100px;
+  .content {
+    background: #fff;
+    box-shadow: 0 10px 40px rgba(0,0,0,.2);
+    box-sizing: border-box;
+    padding: 20px;
+    overflow: hidden;
+    font-size: 14px;
+
+    .main-image {
+      width: 350px;
+      max-width: 100%;
+      float: left;
+      margin-top: 15px;
+      margin-right: 20px;
+    }
+
+    h1, h2 {
+      font-size: 20px;
+    }
+
+    img {
+      margin: 0 auto;
+      display: block;
+      max-width: 100%;
+      max-height: 500px;
+    }
+
+    a {
+      text-decoration: none;
+      color: @blue;
+      font-weight: 600;
+    }
+  }
+}
 
 .knowledge {
   margin-bottom: 100px;
@@ -14,11 +52,16 @@
   .tile {
     float: left;
     margin: 10px 20px 10px 0;
+    text-decoration: none;
+    color: #252525;
+
     .image {
       width: 300px;
       height: 150px;
       background: @cyan;
       box-shadow: 0 10px 50px rgba(0,0,0,.1);
+      background-size: cover;
+      background-position: center;
     }
     .title {
       width: 300px;

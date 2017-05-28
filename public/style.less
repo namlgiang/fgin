@@ -1,6 +1,7 @@
 // out: style.css,compress: true
 @cyan: #2ddfff;
 @grey: #616161;
+@highlight: #41ffdf;
 
 body {
   margin: 0;
@@ -10,28 +11,29 @@ body {
   position: absolute;
   width: 100%;
   padding-top: 150px;
+  background: url(img/bg.png);
 }
 
-.background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  z-index: -1;
-}
-
-.background::before {
-  content: "";
-  background: #c2a3ff;
-  width: 800px;
-  height: 3000px;
-  position: absolute;
-  top: -500px;
-  left: 50%;
-  transform: rotateZ(30deg);
-}
+// .background {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+//   overflow: hidden;
+//   z-index: -1;
+// }
+//
+// .background::before {
+//   content: "";
+//   background: @cyan;
+//   width: 800px;
+//   height: 3000px;
+//   position: absolute;
+//   top: -500px;
+//   left: 50%;
+//   transform: rotateZ(30deg);
+// }
 
 .content {
   width: 1000px;
@@ -67,7 +69,8 @@ body {
     font-weight: 600;
     li { display: inline-block;}
     li:not(:last-of-type) { margin-right: 20px;}
-    li.active a, li:hover a { color: @cyan;}
+    li.active a { color: @cyan;}
+    li:hover a {color: @highlight;}
     a {
       text-decoration: none;
       color: #fff;
@@ -112,22 +115,21 @@ body {
   color: #9e9e9e;
   font-style: italic;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 500;
   overflow: hidden;
   a {
     text-decoration: none;
-    color: #9e9e9e;
-    transition: 200ms;
+    color: @cyan;
   }
   a:hover {
-    color: @cyan;
+    color: @highlight;
   }
 
   .tile {
     max-width: 200px;
     float: left;
     .title {
-      color: @cyan;
+      color: #fff;
     }
     .title::before {
       content: "";
@@ -142,6 +144,9 @@ body {
       margin-left: 15px;
       margin-top: 10px;
     }
+    .desc.small {
+      font-size: 12px;
+    }
   }
   .tile:not(:last-of-type) {
     margin-right: 40px;
@@ -150,5 +155,23 @@ body {
     clear: both;
     padding-top: 30px;
     font-size: 12px;
+  }
+  .email {
+    width: 100%;
+    font-size: 12px;
+    font-style: italic;
+    margin-top: 5px;
+  }
+  .submit {
+    background: #252525;
+    color: @cyan;
+    display: inline-block;
+    padding: 2px 15px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 600;
+  }
+  .submit:hover {
+    color: @highlight;
   }
 }

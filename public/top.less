@@ -45,10 +45,14 @@
         background: @cyan;
         margin-right: 15px;
         box-shadow: 0 10px 50px rgba(0,0,0,.1);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
       }
       .desc {
         font-size: 14px;
         height: 100px;
+        max-width: 600px;
       }
       .action {
         .share, .buy {
@@ -61,6 +65,7 @@
           cursor: pointer;
           box-shadow: 0 10px 50px rgba(0,0,0,.1);
           transition: 200ms;
+          text-decoration: none;
         }
         .buy {
           background: @cyan;
