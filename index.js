@@ -72,6 +72,8 @@ function approveDomains(opts, certs, cb) {
   cb(null, { options: opts, certs: certs });
 }
 
+app.use(express.static('public'));
+
 app.locals = {
   title: null,
   article: null,
