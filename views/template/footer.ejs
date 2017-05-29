@@ -67,5 +67,8 @@
         $(".menu li").removeClass("active");
         $(nav[i]).closest('li').addClass("active");
       }
+    $(".menu-toggle").click(function() {
+      $(".menu").toggleClass("active");
+    });
   });
 </script>
