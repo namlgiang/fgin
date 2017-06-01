@@ -108,6 +108,20 @@ app.get('/picks', function(req, res) {
   res.render('picks');
 });
 
+app.get('/saveemail/:email', function(req, res) {
+  var email = req.params.email;
+  if(validateEmail(email)) {
+    fs.appendFile("email.txt", email + "\n");
+    res.send("1");
+  }
+  else { res.send("0");}
+});
+
+function validateEmail(email) {
+  var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(email);
+}
+
 // handles acme-challenge and redirects to http
 require('http').createServer(lex.middleware(require('redirect-https')())).listen(80, function () {
   console.log("Listening for ACME http-01 challenges on", this.address());

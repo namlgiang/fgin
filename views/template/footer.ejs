@@ -43,6 +43,7 @@
         Looking for free fidget toys weekly? Get in line.<br>
         <input type="text" class="email" value="" placeholder="Your email here"><br>
         <div class="submit">Submit</div>
+        <div class="email-note"></div>
       </div>
     </div>
 
@@ -73,5 +74,22 @@
     $(".menu a").click(function () {
       $(".menu").removeClass("active");
     });
+    $(".email").keydown(function(e) {
+      if(e.keyCode == 13) saveEmail();
+    });
+    $(".submit").click(function() {
+      saveEmail();
+    });
   });
+  function saveEmail() {
+    $.get("/saveemail/" + $(".email").val(), function(data) {
+      if(data == "1") {
+        $(".email").val("");
+        $(".email-note").removeClass("error").html("Cool! You are in.");
+      }
+      else {
+        $(".email-note").addClass("error").html("Invalid email. Try again.");
+      }
+    });
+  }
 </script>

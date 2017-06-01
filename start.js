@@ -1,5 +1,6 @@
 var express = require('express');
 var app = express();
+var fs = require('fs');
 app.set('view engine', 'ejs');
 
 function getTitle(s) {
@@ -45,6 +46,20 @@ app.get('/picks', function(req, res) {
   res.render('picks');
 });
 
-app.listen(80, function () {
+app.get('/saveemail/:email', function(req, res) {
+  var email = req.params.email;
+  if(validateEmail(email)) {
+    fs.appendFile("email.txt", email + "\n");
+    res.send("1");
+  }
+  else { res.send("0");}
+});
+
+function validateEmail(email) {
+  var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(email);
+}
+
+app.listen(8080, function () {
   console.log('Example app listening on port 80!')
 })
