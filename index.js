@@ -84,28 +84,16 @@ app.get('/', function(req, res) {
   res.render('index');
 });
 
-app.get('/news', function(req, res) {
-  res.render('news');
+app.get('/:cat', function(req, res) {
+  res.render(req.params.cat);
 });
 
 app.get('/news/:article', function(req, res) {
   res.render('news', {article: req.params.article, title: getTitle(req.params.article)});
 });
 
-app.get('/top', function(req, res) {
-  res.render('top');
-});
-
-app.get('/knowledge', function(req, res) {
-  res.render('knowledge');
-});
-
 app.get('/knowledge/:knowledge', function(req, res) {
   res.render('knowledge', {knowledge: req.params.knowledge, title: getTitle(req.params.knowledge)});
-});
-
-app.get('/picks', function(req, res) {
-  res.render('picks');
 });
 
 app.get('/saveemail/:email', function(req, res) {
