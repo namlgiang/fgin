@@ -111,10 +111,10 @@ function validateEmail(email) {
 }
 
 // handles acme-challenge and redirects to http
-require('http').createServer(lex.middleware(require('redirect-https')())).listen(80, function () {
+require('http').createServer(lex.middleware(require('redirect-https')())).listen(8080, function () {
   console.log("Listening for ACME http-01 challenges on", this.address());
 });
 
-server = require('https').createServer(lex.httpsOptions, lex.middleware(app)).listen(443, function () {
+server = require('https').createServer(lex.httpsOptions, lex.middleware(app)).listen(8080, function () {
   console.log("Listening for ACME tls-sni-01 challenges and serve app on", this.address());
 });
